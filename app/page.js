@@ -22,7 +22,7 @@ export default function Home() {
         <Tech />
         <Project />
         <div className="relative z-0">
-          <Contact /> {/* here is a error with threejs math */}
+          {/* <Contact /> here is a error with threejs math */}
           <StarsCanvas />
         </div>
       </div>
