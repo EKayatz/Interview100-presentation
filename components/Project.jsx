@@ -38,13 +38,13 @@ const Project = () => {
               href="https://bayer-coding-challenge.vercel.app/"
               className="cursor-pointer"
             >
-              <h3 className="text-fourth font-bold text-[24px]">
+              <h3 className="text-fourth font-bold text-[24px] px-auto">
                 Interview100
               </h3>
             </Link>
             <Link
               href="https://github.com/EKayatz/Intrerview100"
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              className="black-gradient w-9 h-9 rounded-full flex justify-center items-center cursor-pointer"
             >
               <Image
                 src={github}
