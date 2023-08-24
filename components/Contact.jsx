@@ -6,27 +6,29 @@ import github from "@/public/github.png";
 import EarthCanvas from "./canvas/Earth";
 import Image from "next/image";
 import Link from "next/link";
+import { contact } from "../constants/index";
 
-const ContactCard = ({ contact }) => {
+const ContactCard = ({ contact, index }) => {
   return (
     <motion.div
-      variants={fadeIn("right", "spring", 1, 0.75)}
+      variants={fadeIn("right", "spring", 1 * index, 0.75)}
       className="mt-5 text-fourth p-5 rounded-xl bg-secondary w-full lg:w-3/4"
+      key={index}
     >
       <div className="flex gap-[2rem]">
         <div className="my-auto">
           <Image
-            src="https://avatars.githubusercontent.com/u/93713157?v=4"
+            src={contact.image}
             alt="profile picture"
             height={60}
             width={60}
-            className="rounded-full object-contain"
+            className="rounded-full object-cover"
           />
         </div>
         <div className="flex items-center">
-          <h3 className="sectionSubText">Elias Kayatz</h3>
+          <h3 className="sectionSubText">{contact.name}</h3>
           <div className="flex gap-2 p-3">
-            <Link href="https://github.com/EKayatz">
+            <Link href={contact.github}>
               <Image
                 src={github}
                 alt="github"
@@ -35,7 +37,7 @@ const ContactCard = ({ contact }) => {
                 className="rounded-full object-contain"
               />
             </Link>
-            <Link href="https://github.com/EKayatz">
+            <Link href={contact.linkedin}>
               <Image
                 src={linkedin}
                 alt="linkedin"
@@ -60,10 +62,9 @@ const Contact = () => {
       >
         <h3 className="sectionHeadText">Contact:</h3>
         <div>
-          <ContactCard />
-          <ContactCard />
-          <ContactCard />
-          <ContactCard />
+          {contact.map((contact, index) => (
+            <ContactCard contact={contact} index={index} />
+          ))}
         </div>
       </motion.div>
       <motion.div

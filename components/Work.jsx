@@ -8,8 +8,11 @@ import "react-vertical-timeline-component/style.min.css";
 import { work } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import { useState } from "react";
+import Model from "./Modal";
 
-const WorkCard = ({ experience }) => {
+const WorkCard = ({ work }) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -20,25 +23,35 @@ const WorkCard = ({ experience }) => {
       iconStyle={{ background: "#BFACE2" }}
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-        <p
-          className="text-secondary text-[16px] font-semibold"
-          style={{ margin: 0 }}
-        >
-          {experience.company_name}
-        </p>
+        <h3 className="text-white text-[24px] font-bold">{work.title}</h3>
       </div>
 
       <ul className="mt-5 list-disc ml-5 space-y-2">
-        {experience.points.map((point, index) => (
+        {work.points.map((point, index) => (
           <li
-            key={`experience-point-${index}`}
+            key={`work-point-${index}`}
             className="text-fourth text-[14px] pl-1 tracking-wider"
           >
             {point}
           </li>
         ))}
       </ul>
+      {work.image ? (
+        <button
+          className="m-2 mt-4 p-3 px-5 rounded-3xl bg-primary hover:bg-tertiary"
+          onClick={() => setIsOpen(true)}
+        >
+          View {work.tag}
+        </button>
+      ) : (
+        ""
+      )}
+      <Model
+        image={work.image}
+        title={work.tag}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      />
     </VerticalTimelineElement>
   );
 };
@@ -52,8 +65,8 @@ const Work = () => {
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
-          {work.map((experience, index) => (
-            <WorkCard key={`experience-${index}`} experience={experience} />
+          {work.map((work, index) => (
+            <WorkCard key={`work-${index}`} work={work} />
           ))}
         </VerticalTimeline>
       </div>

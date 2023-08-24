@@ -16,6 +16,12 @@ import grafbase from "../public/tech/grafbase.svg";
 import headless from "../public/tech/headless.png";
 import graphql from "../public/tech/graphql.png";
 import vercel from "../public/tech/vercel.png";
+import elias from "../public/contact/elias.jpg";
+import yy from "../public/contact/yy.png";
+import wireframe from "../public/design/wireframe.jpg";
+import userjourney from "../public/design/userjourney.jpg";
+import mockup from "../public/design/mockup.jpg";
+import deployment from "../public/design/delpoyment.png";
 
 export {
   javascript,
@@ -36,4 +42,10 @@ export {
   headless,
   graphql,
   vercel,
+  elias,
+  yy,
+  wireframe,
+  userjourney,
+  mockup,
+  deployment,
 };

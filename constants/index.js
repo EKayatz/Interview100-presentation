@@ -1,3 +1,4 @@
+import Contact from "@/components/Contact";
 import {
   typescript,
   reactjs,
@@ -8,7 +9,14 @@ import {
   headless,
   graphql,
   vercel,
+  elias,
+  yy,
+  wireframe,
+  userjourney,
+  mockup,
+  deployment,
 } from "../public/index";
+import { userAgent } from "next/server";
 
 export const navLinks = [
   {
@@ -86,7 +94,7 @@ const technologies = [
 const work = [
   {
     title: "What we were looking for",
-    // icon: starbucks,
+    image: "",
     points: [
       "A Website where we can prepare for coding interviews",
       "Prepare for companies needs",
@@ -94,17 +102,9 @@ const work = [
     ],
   },
   {
-    title: "Create a Wireframe",
-    //icon: tesla,
-    image: "",
-    points: [
-      "Think about the structure of the website",
-      "Develop a rough design for the website",
-    ],
-  },
-  {
     title: "Think about a user journey",
-    // icon: shopify,
+    image: userjourney,
+    tag: "User Journey",
     points: [
       "How should a user navigate through the website",
       "How should a user interact with the website",
@@ -112,8 +112,18 @@ const work = [
     ],
   },
   {
+    title: "Create a Wireframe",
+    image: wireframe,
+    tag: "Wireframe",
+    points: [
+      "Think about the structure of the website",
+      "Develop a rough design for the website",
+    ],
+  },
+  {
     title: "Create a Mockup",
-    //icon: meta,
+    image: mockup,
+    tag: "Mockup",
     points: [
       "Think about the color scheme",
       "Think about the font",
@@ -122,7 +132,6 @@ const work = [
   },
   {
     title: "Develop a Frontend",
-    //icon: meta,
     points: [
       "Create a new Project with NextJS",
       "Develop the structure of the website using reusable components and style it with TailwindCSS",
@@ -131,17 +140,16 @@ const work = [
   },
   {
     title: "Develop a Backend",
-    //icon: meta,
     points: [
       "Implement Login with GoogleOAuth and get session with NextAuth.js and JWT",
-      "Create the Grafbase Schema",
-      "Create the GraphQL Schema",
+      "Create the Grafbase and GraphQL Schema",
       "Develop action functions for the GraphQL Schema, for querying, creating, updating and deleting data",
     ],
   },
   {
     title: "Deployment",
-    //icon: meta,
+    image: deployment,
+    tag: "Deployment",
     points: [
       "Deploy the Website on Vercel",
       "Add environment variables",
@@ -150,28 +158,31 @@ const work = [
   },
 ];
 
-const projects = [
+const contact = [
   {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    //image: carrent,
-    source_code_link: "https://github.com/",
+    name: "Elias Kayatz",
+    github: "https://github.com/EKayatz",
+    linkedin: "https://www.linkedin.com/in/elias-kayatz-686629240/",
+    image: elias,
+  },
+  {
+    name: "Anton Isakov",
+    github: "https://github.com/electroautomatic",
+    linkedin: "https://www.linkedin.com/in/anton-isakov/",
+    image: "https://avatars.githubusercontent.com/u/88892900?v=4",
+  },
+  {
+    name: "Irene Casal",
+    github: "https://github.com/irrivero",
+    linkedin: "https://www.linkedin.com/in/irriverocas/",
+    image: "https://avatars.githubusercontent.com/u/116060502?v=4",
+  },
+  {
+    name: "Yuanying Li",
+    github: "https://github.com/YYBer",
+    linkedin: "https://www.linkedin.com/in/yuanying-l-8bb20b121/",
+    image: yy,
   },
 ];
 
-export { services, technologies, work, projects };
+export { services, technologies, work, contact };

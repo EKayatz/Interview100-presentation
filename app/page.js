@@ -18,8 +18,8 @@ export default function Home() {
       </div>
       <Task />
       <Work />
-      <Tech />
       <Project />
+      <Tech />
       <Learnings />
       <div className="relative z-0">
         <Contact />
