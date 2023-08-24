@@ -172,7 +172,7 @@ const contact = [
     image: "https://avatars.githubusercontent.com/u/88892900?v=4",
   },
   {
-    name: "Irene Casal",
+    name: "Irene Rivero Casal",
     github: "https://github.com/irrivero",
     linkedin: "https://www.linkedin.com/in/irriverocas/",
     image: "https://avatars.githubusercontent.com/u/116060502?v=4",

@@ -33,7 +33,7 @@ const ContactCard = ({ contact, index }) => {
                 src={github}
                 alt="github"
                 height={40}
-                width={40}
+                width={45}
                 className="rounded-full object-contain"
               />
             </Link>
