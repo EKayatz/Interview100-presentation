@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import school from "../public/school.png";
 import bayer from "../public/bayer.png";

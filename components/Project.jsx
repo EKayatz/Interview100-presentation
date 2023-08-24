@@ -1,4 +1,3 @@
-"use client";
 import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import github from "@/public/github.png";

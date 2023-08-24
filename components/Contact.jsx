@@ -1,4 +1,3 @@
-"use client";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { slideIn, fadeIn } from "../utils/motion";
@@ -12,7 +11,7 @@ const ContactCard = ({ contact }) => {
   return (
     <motion.div
       variants={fadeIn("right", "spring", 1, 0.75)}
-      className="mt-5 text-fourth p-5 rounded-xl bg-secondary w-3/4"
+      className="mt-5 text-fourth p-5 rounded-xl bg-secondary w-full lg:w-3/4"
     >
       <div className="flex gap-[2rem]">
         <div className="my-auto">
@@ -24,7 +23,7 @@ const ContactCard = ({ contact }) => {
             className="rounded-full object-contain"
           />
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center">
           <h3 className="sectionSubText">Elias Kayatz</h3>
           <div className="flex gap-2 p-3">
             <Link href="https://github.com/EKayatz">
@@ -59,7 +58,6 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
-        <p className="sectionSubText">Get in touch</p>
         <h3 className="sectionHeadText">Contact:</h3>
         <div>
           <ContactCard />
