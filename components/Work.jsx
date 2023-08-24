@@ -5,7 +5,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { experiences } from "../constants";
+import { work } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
@@ -17,11 +17,7 @@ const WorkCard = ({ experience }) => {
         color: "#ECF2FF",
       }}
       contentArrowStyle={{ borderRight: "15px solid  bg-fourth" }}
-      date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
-      icon={
-        <div className="flex justify-center items-center w-full h-full"></div>
-      }
+      iconStyle={{ background: "#BFACE2" }}
     >
       <div>
         <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
@@ -37,7 +33,7 @@ const WorkCard = ({ experience }) => {
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
+            className="text-fourth text-[14px] pl-1 tracking-wider"
           >
             {point}
           </li>
@@ -56,7 +52,7 @@ const Work = () => {
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
+          {work.map((experience, index) => (
             <WorkCard key={`experience-${index}`} experience={experience} />
           ))}
         </VerticalTimeline>

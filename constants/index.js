@@ -7,6 +7,7 @@ import {
   grafbase,
   headless,
   graphql,
+  vercel,
 } from "../public/index";
 
 export const navLinks = [
@@ -20,7 +21,7 @@ export const navLinks = [
   },
   {
     id: "project",
-    title: "project",
+    title: "Project",
   },
   {
     id: "contact",
@@ -30,16 +31,16 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Wireframe",
+    title: "//create a design mockup",
   },
   {
-    title: "Mockup",
+    title: "//deliver a working front-end application",
   },
   {
-    title: "Programming",
+    title: "//deliver a working back-end application",
   },
   {
-    title: "Deployment",
+    title: "//deploy on the cloud and provide access to other participants",
   },
 ];
 
@@ -76,59 +77,75 @@ const technologies = [
     name: "HeadlessUI",
     icon: headless,
   },
+  {
+    name: "vercel",
+    icon: vercel,
+  },
 ];
 
-const experiences = [
+const work = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "What we were looking for",
     // icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "A Website where we can prepare for coding interviews",
+      "Prepare for companies needs",
+      "Share experience on one location and exchange with other people",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
+    title: "Create a Wireframe",
     //icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    image: "",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Think about the structure of the website",
+      "Develop a rough design for the website",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
+    title: "Think about a user journey",
     // icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "How should a user navigate through the website",
+      "How should a user interact with the website",
+      "How should a user use the website",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
+    title: "Create a Mockup",
     //icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Think about the color scheme",
+      "Think about the font",
+      "Create the design and details for the website",
+    ],
+  },
+  {
+    title: "Develop a Frontend",
+    //icon: meta,
+    points: [
+      "Create a new Project with NextJS",
+      "Develop the structure of the website using reusable components and style it with TailwindCSS",
+      "Develop dropdowns, buttons, inputs, etc. with the help of headlessUI",
+    ],
+  },
+  {
+    title: "Develop a Backend",
+    //icon: meta,
+    points: [
+      "Implement Login with GoogleOAuth and get session with NextAuth.js and JWT",
+      "Create the Grafbase Schema",
+      "Create the GraphQL Schema",
+      "Develop action functions for the GraphQL Schema, for querying, creating, updating and deleting data",
+    ],
+  },
+  {
+    title: "Deployment",
+    //icon: meta,
+    points: [
+      "Deploy the Website on Vercel",
+      "Add environment variables",
+      "Change GoogleOAuth credentials",
     ],
   },
 ];
@@ -157,4 +174,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, projects };
+export { services, technologies, work, projects };

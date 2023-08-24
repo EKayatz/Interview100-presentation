@@ -15,6 +15,7 @@ import nextjs from "../public/tech/next.png";
 import grafbase from "../public/tech/grafbase.svg";
 import headless from "../public/tech/headless.png";
 import graphql from "../public/tech/graphql.png";
+import vercel from "../public/tech/vercel.png";
 
 export {
   javascript,
@@ -34,4 +35,5 @@ export {
   grafbase,
   headless,
   graphql,
+  vercel,
 };

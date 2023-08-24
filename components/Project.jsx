@@ -21,7 +21,7 @@ const Project = () => {
             scale: 1,
             speed: 450,
           }}
-          className="bg-tertiary p-5 rounded-2xl w-[70%]"
+          className="bg-primary p-5 rounded-2xl w-[70%] shadow-card"
         >
           <Link
             href="https://bayer-coding-challenge.vercel.app/"
@@ -33,7 +33,15 @@ const Project = () => {
               className="w-full object-contain"
             />
           </Link>
-          <div className="absolute inset-0 flex justify-end m-3">
+          <div className="inset-0 flex justify-between mt-5">
+            <Link
+              href="https://bayer-coding-challenge.vercel.app/"
+              className="cursor-pointer"
+            >
+              <h3 className="text-fourth font-bold text-[24px]">
+                Interview100
+              </h3>
+            </Link>
             <Link
               href="https://github.com/EKayatz/Intrerview100"
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
@@ -43,16 +51,6 @@ const Project = () => {
                 alt="source code"
                 className="w-1/2 h-1/2 object-contain"
               />
-            </Link>
-          </div>
-          <div className="mt-5">
-            <Link
-              href="https://bayer-coding-challenge.vercel.app/"
-              className="cursor-pointer"
-            >
-              <h3 className="text-fourth font-bold text-[24px]">
-                Interview100
-              </h3>
             </Link>
           </div>
         </Tilt>

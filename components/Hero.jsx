@@ -5,6 +5,7 @@ import overview from "../public/overview.png";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -43,13 +44,22 @@ const Hero = () => {
               42 Berlin
             </p>
           </div>
+          <div className="text-fourth font-light text-xl">
+            <p className="mt-2">Project: B</p>
+            <p className="mt-2">Team: Universe</p>
+          </div>
         </div>
         <Tilt className="w-[400px] md:w-[600px] lg:w-[800px] m-auto absolute top-[20rem] right-10">
           <motion.div
             variants={fadeIn("right", "spring", 0.5, 0.75)}
             className="w-full p-[15px] rounded-[20px] shadow-card"
           >
-            <Image src={overview} alt="overview" className="text-white-100" />
+            <Link
+              href="https://bayer-coding-challenge.vercel.app/"
+              className="cursor-pointer"
+            >
+              <Image src={overview} alt="overview" className="text-white-100" />
+            </Link>
           </motion.div>
         </Tilt>
       </div>
