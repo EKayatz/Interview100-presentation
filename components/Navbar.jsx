@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 import Image from "next/image";
+import Link from "next/link";
 import { navLinks } from "../constants/index";
 import logo from "../public/logo.png";
 import menu from "../public/menu.svg";
@@ -36,7 +36,7 @@ const Navbar = () => {
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
-          to="/"
+          href="/"
           className="flex items-center gap-2"
           onClick={() => {
             setActive("");
@@ -64,7 +64,7 @@ const Navbar = () => {
               } hover:text-fourth text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <Link to={`#${nav.id}`}>{nav.title}</Link>
+              <Link href={`#${nav.id}`}>{nav.title}</Link>
             </li>
           ))}
         </ul>
@@ -94,7 +94,7 @@ const Navbar = () => {
                     setActive(nav.title);
                   }}
                 >
-                  <Link to={`#${nav.id}`}>{nav.title}</Link>
+                  <Link href={`#${nav.id}`}>{nav.title}</Link>
                 </li>
               ))}
             </ul>

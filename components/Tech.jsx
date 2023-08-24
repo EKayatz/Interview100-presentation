@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { technologies } from "../constants/index";
 import { SectionWrapper } from "../hoc";
