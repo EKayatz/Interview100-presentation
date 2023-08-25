@@ -30,7 +30,7 @@ const Modal = ({ image, title, isOpen, setIsOpen }) => {
           leaveTo="opacity-0 scale-95"
         >
           <div className="fixed inset-0 flex items-center justify-center p-4">
-            <Dialog.Panel className="w-[50%] rounded-2xl bg-primary p-10">
+            <Dialog.Panel className="rounded-2xl bg-primary sm:w-[90%] p-4 lg:w-[50%]">
               <button
                 type="button"
                 onClick={() => setIsOpen(false)}
