@@ -15,7 +15,7 @@ const ContactCard = ({ contact, index }) => {
       className="mt-5 text-fourth p-5 rounded-xl bg-secondary w-full lg:w-3/4"
       key={index}
     >
-      <div className="flex gap-[2rem]">
+      <div className="flex gap-[1rem]">
         <div className="my-auto">
           <Image
             src={contact.image}

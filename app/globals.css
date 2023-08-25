@@ -36,7 +36,7 @@ body {
 }
 
 .sectionHeadText {
-  @apply text-fourth font-black md:text-[60px] sm:text-[50px] text-[30px];
+  @apply text-fourth font-bold md:text-[60px] sm:text-[50px] text-[30px];
 }
 
 .sectionSubText {

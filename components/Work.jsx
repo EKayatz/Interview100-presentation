@@ -23,7 +23,7 @@ const WorkCard = ({ work }) => {
       iconStyle={{ background: "#BFACE2" }}
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{work.title}</h3>
+        <h3 className="text-white text-[24px] font-medium">{work.title}</h3>
       </div>
 
       <ul className="mt-5 list-disc ml-5 space-y-2">
