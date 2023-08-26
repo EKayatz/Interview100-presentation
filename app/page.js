@@ -8,6 +8,7 @@ import Project from "@/components/Project";
 import Contact from "@/components/Contact";
 import StarsCanvas from "@/components/canvas/Stars";
 import Learnings from "@/components/Learnings";
+import Share from "@/components/Share";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <div className="relative z-0">
         <Contact />
         <StarsCanvas />
+        <Share />
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const ContactCard = ({ contact, index }) => {
   return (
     <motion.div
       variants={fadeIn("right", "spring", 1 * index, 0.75)}
-      className="mt-5 text-fourth p-5 rounded-xl bg-secondary w-full lg:w-3/4"
+      className="mt-5 text-fourth p-5 rounded-xl bg-secondary w-full lg:w-3/4 shadow-card"
       key={index}
     >
       <div className="flex gap-[1rem]">
