@@ -7,6 +7,8 @@ import close from "../public/close.svg";
 import { Dialog } from "@headlessui/react";
 import qr from "../public/qr.svg";
 import { SectionWrapper } from "@/hoc";
+import github from "@/public/github.png";
+import Link from "next/link";
 
 const ShareModal = ({ isOpen, setIsOpen }) => {
   return (
@@ -65,13 +67,23 @@ const ShareModal = ({ isOpen, setIsOpen }) => {
 const Share = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="content-center">
+    <div className="flex gap-5 p-auto">
       <button
-        className="sectionSubText m-2 mt-4 p-3 px-10 rounded-3xl bg-primary text-fourth hover:bg-fourth hover:text-primary border-fourth border-2 shadow-card"
+        className="sectionSubText m-2 p-3 px-10 rounded-3xl bg-primary text-fourth hover:bg-fourth hover:text-primary border-fourth border-2 shadow-card"
         onClick={() => setIsOpen(true)}
       >
         Share Website
       </button>
+      <Link
+        href="https://github.com/EKayatz/Interview100-presentation"
+        className="black-gradient w-9 h-9 rounded-full flex justify-center items-center cursor-pointer my-auto"
+      >
+        <Image
+          src={github}
+          alt="source code"
+          className="w-1/2 h-1/2 object-contain"
+        />
+      </Link>
       <ShareModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
