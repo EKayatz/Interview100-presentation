@@ -11,7 +11,7 @@
 
 Welcome to Interview100, your go-to platform for mastering coding interview questions and enhancing your technical interview preparation. Whether you're a budding software engineer or an experienced developer aiming to sharpen your skills, Interview100 has you covered.
 
-This is the presentation Website for the <Link href="https://github.com/EKayatz/Intrerview100">BayerCodingChallenge</Link>
+This is the presentation Website for the [BayerCodingChallenge](https://github.com/EKayatz/Intrerview100).
 
 ## About Interview100
 
